@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import asyncio, logging
+import logging;logging; logging.basicConfig(level=logging.INFO)
 
 import aiomysql
 
-
 def log(sql, args=()):
     logging.info('SQL: %s' % sql)
-
 
 async def create_pool(loop, **kw):
     logging.info('create database connection pool...')
